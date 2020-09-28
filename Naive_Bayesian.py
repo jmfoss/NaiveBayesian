@@ -3,11 +3,12 @@
 """
 Created on Mon Oct 28 14:45:37 2019
 
-@author: jmfoss
+@author: Joshua Foss
 """
 import json
 import pandas as pd
 
+# Prompt the user with an options screen
 def py_nb():
     while(True):
         choice = input('1) Naive Bayesian classifier from data\n2) Load and test accuracy of Naive Bayesian classifier\n3) Apply a Naive Bayesian classifier to new cases\n4) Quit\nSelect by number: ')
@@ -21,7 +22,9 @@ def py_nb():
                 interactive()
         else:
             return;
-        
+
+# Prompts user for an ARFF file
+# and loads that file
 def loadData():
     filename = input('Input file name of data in ARFF format: ')
     file = open(filename, 'rt')
